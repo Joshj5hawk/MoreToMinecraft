@@ -1,14 +1,14 @@
 [
 {
-  "modid": "cyanflower",
-  "name": "Cyan Flower",
-  "description": "A mod that adds a cyan flower to world gen!",
-  "version": "1.1",
+  "modid": "moretominecraft",
+  "name": "More To Minecraft",
+  "description": "A mod that adds, you guessed it, More to Minecraft!",
+  "version": "0.1A",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["JoshJ5Hawk"],
-  "credits": "Code: JoshJ5Hawk",
+  "authorList": ["JoshJ5Hawk and Techzilla"],
+  "credits": "Code/Ideas: JoshJ5Hawk; Art/Ideas: Techzilla",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
