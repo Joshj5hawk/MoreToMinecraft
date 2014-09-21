@@ -1,13 +1,13 @@
 [
 {
   "modid": "moretominecraft",
-  "name": "More To Minecraft",
+  "name": "More To Minecraft: We're Back!",
   "description": "A mod that adds, you guessed it, More to Minecraft!",
   "version": "0.1A",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["JoshJ5Hawk and Techzilla"],
+  "authorList": ["JoshJ5Hawk", "Techzilla"],
   "credits": "Code/Ideas: JoshJ5Hawk; Art/Ideas: Techzilla",
   "logoFile": "",
   "screenshots": [],
