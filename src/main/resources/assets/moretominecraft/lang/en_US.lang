@@ -1,5 +1,22 @@
+#Creative Tab
 itemGroup.tabMoreToMinecraft=More To Minecraft
 
+#Blocks
+tile.blockObsidianGlass.name=Obsidian Glass
+
+#Ingot Ores
+tile.blockIngotOres.CopperOre.name=Copper Ore
+tile.blockIngotOres.MithrilOre.name=Mithril Ore
+tile.blockIngotOres.SaroniteOre.name=Saronite Ore
+tile.blockIngotOres.OnyxOre.name=Onyx Ore
+
+#Gem Ores
+tile.blockGemOres.TopazOre.name=Topaz Ore
+tile.blockGemOres.AmethystOre.name=Amethyst Ore
+tile.blockGemOres.RubyOre.name=Ruby Ore
+tile.blockGemOres.SapphireOre.name=Sapphire Ore
+
+#Slippery Blocks
 tile.blockSlipperyStoneBricks.name=Slippery Stone Bricks
 tile.blockSlipperyOakPlanks.name=Slippery Oak Planks
 tile.blockSlipperySprucePlanks.name=Slippery Spruce Planks
@@ -7,3 +24,18 @@ tile.blockSlipperyBirchPlanks.name=Slippery Birch Planks
 tile.blockSlipperyJunglePlanks.name=Slippery Jungle Planks
 tile.blockSlipperyAcaciaPlanks.name=Slippery Acacia Planks
 tile.blockSlipperyDarkOakPlanks.name=Slippery DarkOak Planks
+
+#Items
+#Ingot
+item.itemCopperIngot.name=Copper Ingot
+item.itemMithrilIngot.name=Mithril Ingot
+item.itemSaroniteNugget.name=Saronite Nugget
+item.itemSaroniteIngot.name=Saronite Ingot
+item.itemOnyxGem.name=Onyx Gem
+item.itemOnyxIngot.name=Onyx Ingot
+
+#Gems
+item.itemTopazGem.name=Topaz Gem
+item.itemAmethystGem.name=Amethyst Gem
+item.itemSapphireGem.name=Sapphire Gem
+item.itemRubyGem.name=Ruby Gem

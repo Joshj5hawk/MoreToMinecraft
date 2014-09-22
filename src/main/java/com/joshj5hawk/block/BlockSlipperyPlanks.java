@@ -17,24 +17,20 @@ import com.joshj5hawk.main.MoreToMinecraft;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockSlipperyBlocks extends Block 
+public class BlockSlipperyPlanks extends Block 
 {
-	public static int currentPass = 0;
-	
-	@SideOnly(Side.CLIENT)
-	private IIcon overlay;
 	
 	@SideOnly(Side.CLIENT)
 	private IIcon[] texture;
 	
-	public BlockSlipperyBlocks(Material mat)
+	public BlockSlipperyPlanks(Material mat)
 	{
 		super(mat);
 		this.setHardness(2.0F);
 		this.setResistance(2.0F);
 		this.setCreativeTab(MoreToMinecraft.tabMoreToMinecraft);
 		this.slipperiness = 0.98F;
-		this.setStepSound(soundTypeGlass);
+		this.setStepSound(soundTypeWood);
 	}
 	
 	
@@ -42,7 +38,11 @@ public class BlockSlipperyBlocks extends Block
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister register)
 	{
-		overlay = register.registerIcon(Strings.modid + ":slipperyOverlay");
+		texture = new IIcon[6];
+		for(int i = 0; i < 6; i ++)
+		{
+			texture[i] = register.registerIcon(Strings.modid + ":blockSlipperyPlanks_" + i);
+		}
 	}
 	
 	@Override
@@ -51,7 +51,7 @@ public class BlockSlipperyBlocks extends Block
 	{
 		for(int i = 0; i < 6; ++ i)
 		{
-			list.add(new ItemStack(MTMBlock.blockSlipperyBlocks, 1, i));
+			list.add(new ItemStack(MTMBlock.blockSlipperyPlanks, 1, i));
 		}
 	}
 	
@@ -59,21 +59,7 @@ public class BlockSlipperyBlocks extends Block
 	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(int side, int meta)
 	{
-		return currentPass == 0 ? Blocks.planks.getIcon(side, meta) : this.overlay;
-	}
-	
-	@Override
-	public int getRenderBlockPass()
-	{
-		return 1;
-	}
-	
-	@Override
-	@SideOnly(Side.CLIENT)
-	public boolean canRenderInPass(int pass)
-	{
-		currentPass = pass;
-		return true;
+		return texture[meta];
 	}
 	
 	@Override

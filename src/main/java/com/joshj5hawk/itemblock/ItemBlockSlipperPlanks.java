@@ -1,4 +1,4 @@
-package com.joshj5hawk.itemBlocks;
+package com.joshj5hawk.itemblock;
 
 import com.joshj5hawk.lib.Strings;
 
@@ -11,13 +11,13 @@ import net.minecraft.util.IIcon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemBlockSlipperyBlocks  extends ItemBlock
+public class ItemBlockSlipperPlanks  extends ItemBlock
 {
 	private final static String[] SUBNAMES = {"Oak", "Spruce", "Birch", "Jungle", "Acacia", "Dark Oak"};
 	@SideOnly(Side.CLIENT)
 	private IIcon overlay;
 	
-	public ItemBlockSlipperyBlocks(Block block)
+	public ItemBlockSlipperPlanks(Block block)
 	{
 		super(block);
 		setHasSubtypes(true);
@@ -33,32 +33,6 @@ public class ItemBlockSlipperyBlocks  extends ItemBlock
 	public int getMetadata(int meta)
 	{
 		return meta;
-	}
-	
-	@Override
-	@SideOnly(Side.CLIENT)
-	public void registerIcons(IIconRegister iconRegister)
-	{
-		overlay = iconRegister.registerIcon(Strings.modid + ":slipperyOverlay");
-	}
-	
-	@Override
-	@SideOnly(Side.CLIENT)
-	public boolean requiresMultipleRenderPasses()
-	{
-		return true;
-	}
-	
-	@Override
-	public int getRenderPasses(int meta)
-	{
-		return 2;
-	}
-	
-	@Override
-	public IIcon getIcon(ItemStack itemstack, int pass)
-	{
-		return pass == 0 ? Blocks.planks.getIcon(itemstack.getItemDamage(), pass) : overlay;
 	}
 	
 }

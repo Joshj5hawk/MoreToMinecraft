@@ -1,10 +1,8 @@
 package com.joshj5hawk.main;
 
-import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 
 import com.joshj5hawk.block.MTMBlock;
 import com.joshj5hawk.handler.ConfigurationHandler;
@@ -12,6 +10,7 @@ import com.joshj5hawk.item.MTMItem;
 import com.joshj5hawk.lib.Strings;
 import com.joshj5hawk.proxies.CommonProxy;
 import com.joshj5hawk.recipes.MTMCrafting;
+import com.joshj5hawk.worldgen.MTMWorldGen;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -21,6 +20,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -55,9 +55,13 @@ public class MoreToMinecraft
 			}
 		};
 		
-		blocks.initBlocks();
+		MTMWorldGen eventWorldGen = new MTMWorldGen();
 		
+		blocks.initBlocks();
 		items.initItems();
+
+		//World Gen
+		GameRegistry.registerWorldGenerator(eventWorldGen, 0);
 	}
 	
 	@EventHandler
