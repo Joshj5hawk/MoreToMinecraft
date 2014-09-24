@@ -16,14 +16,16 @@ import com.joshj5hawk.main.MoreToMinecraft;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockIngotOres extends Block
+public class BlockGemIngotBlock extends Block
 {
+	
 	@SideOnly(Side.CLIENT)
 	private IIcon[] texture;
 	
-	final static String[] subBlocks = new String[] {"Copper", "Tin", "Mithril", "Saronite", "Onyx"};
+	final static String[] subBlocks = new String[] {"Copper", "Tin", "Mithril", "Saronite", "Onyx",
+													"Titanium", "Topaz", "Amethyst", "Sapphire", "Ruby"};
 	
-	public BlockIngotOres(Material mat)
+	public BlockGemIngotBlock(Material mat)
 	{
 		super(mat);
 		this.setHardness(5.0F);
@@ -38,14 +40,14 @@ public class BlockIngotOres extends Block
 		
 		for(int i = 0; i < subBlocks.length; i++)
 		{
-			texture[i] = iconReg.registerIcon(Strings.modid + ":block" + subBlocks[i] + "Ore");
+			texture[i]	= iconReg.registerIcon(Strings.modid + ":block" + subBlocks[i] + "Block");
 		}
 	}
 	
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item block, CreativeTabs tab, List list)
 	{
-		for(int i = 0; i < subBlocks.length; i++)
+		for(int i = 0; i < subBlocks.length; i ++)
 		{
 			list.add(new ItemStack(block, 1, i));
 		}

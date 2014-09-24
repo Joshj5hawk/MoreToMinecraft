@@ -31,6 +31,10 @@ public class BlockGemOres extends Block
 		super(mat);
 		this.setHardness(5.0F);
 		this.setCreativeTab(MoreToMinecraft.tabMoreToMinecraft);
+		this.setHarvestLevel("pickaxe", 0, 0);
+		this.setHarvestLevel("pickaxe", 1, 1);
+		this.setHarvestLevel("pickaxe", 2, 2);
+		this.setHarvestLevel("pickaxe", 3, 3);
 		
 	}
 	

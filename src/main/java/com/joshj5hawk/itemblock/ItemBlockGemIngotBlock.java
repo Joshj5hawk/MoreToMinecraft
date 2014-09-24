@@ -4,11 +4,13 @@ import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemBlockIngotOres extends ItemBlock
+public class ItemBlockGemIngotBlock extends ItemBlock
 {
-	final static String[] subBlocks = new String[] {"Copper", "Tin", "Mithril", "Saronite", "Onyx"};
 	
-	public ItemBlockIngotOres(Block block)
+	final static String[] subBlocks = new String[] {"Copper", "Tin", "Mithril", "Saronite", "Onyx",
+		"Titanium", "Topaz", "Amethyst", "Sapphire", "Ruby"};
+	
+	public ItemBlockGemIngotBlock(Block block)
 	{
 		super(block);
 		this.setHasSubtypes(true);
@@ -21,7 +23,7 @@ public class ItemBlockIngotOres extends ItemBlock
 		{
 			i = 0;
 		}
-		return super.getUnlocalizedName() + "." + subBlocks[i] + "Ore";
+		return super.getUnlocalizedName() + "." + subBlocks[i] + "Block";
 	}
 	
 	public int getMetadata(int meta)

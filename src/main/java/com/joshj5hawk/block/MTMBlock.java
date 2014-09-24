@@ -5,6 +5,7 @@ import net.minecraft.block.BlockGlass;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
 
+import com.joshj5hawk.itemblock.ItemBlockGemIngotBlock;
 import com.joshj5hawk.itemblock.ItemBlockGemOres;
 import com.joshj5hawk.itemblock.ItemBlockIngotOres;
 import com.joshj5hawk.itemblock.ItemBlockSlipperPlanks;
@@ -19,7 +20,7 @@ public class MTMBlock
 	public static Block blockObsidianGlass;
 	public static Block blockIngotOres;
 	public static Block blockGemOres;
-	
+	public static Block blockGemIngotBlock;
 	
 	
 	public static void initBlocks()
@@ -35,6 +36,8 @@ public class MTMBlock
 		blockObsidianGlass = new BlockObsidianGlass(Material.glass, false).setBlockName("blockObsidianGlass").setCreativeTab(MoreToMinecraft.tabMoreToMinecraft).setResistance(600000.0F).setHardness(0.3F);
 		blockIngotOres = new BlockIngotOres(Material.rock).setBlockName("blockIngotOres");
 		blockGemOres = new BlockGemOres(Material.rock).setBlockName("blockGemOres");
+		blockGemIngotBlock = new BlockGemIngotBlock(Material.iron).setBlockName("blockGemIngotBlock");
+		
 		
 		registerBlocks();
 	}
@@ -45,6 +48,7 @@ public class MTMBlock
 		GameRegistry.registerBlock(blockObsidianGlass, "blockObsidianGlass");
 		GameRegistry.registerBlock(blockIngotOres, ItemBlockIngotOres.class, "blockIngotOres");
 		GameRegistry.registerBlock(blockGemOres, ItemBlockGemOres.class, "blockGemOres");
+		GameRegistry.registerBlock(blockGemIngotBlock, ItemBlockGemIngotBlock.class, "blockGemIngotBlock");
 		
 	}
 	

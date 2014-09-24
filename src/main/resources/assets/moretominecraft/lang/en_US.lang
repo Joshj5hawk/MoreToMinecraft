@@ -6,6 +6,7 @@ tile.blockObsidianGlass.name=Obsidian Glass
 
 #Ingot Ores
 tile.blockIngotOres.CopperOre.name=Copper Ore
+tile.blockIngotOres.TinOre.name=Tin Ore
 tile.blockIngotOres.MithrilOre.name=Mithril Ore
 tile.blockIngotOres.SaroniteOre.name=Saronite Ore
 tile.blockIngotOres.OnyxOre.name=Onyx Ore
@@ -15,6 +16,18 @@ tile.blockGemOres.TopazOre.name=Topaz Ore
 tile.blockGemOres.AmethystOre.name=Amethyst Ore
 tile.blockGemOres.RubyOre.name=Ruby Ore
 tile.blockGemOres.SapphireOre.name=Sapphire Ore
+
+#Gem/Ingot Blcoks
+tile.blockGemIngotBlock.CopperBlock.name=Copper Block
+tile.blockGemIngotBlock.TinBlock.name=Tin Block
+tile.blockGemIngotBlock.MithrilBlock.name=Mithril Block
+tile.blockGemIngotBlock.SaroniteBlock.name=Saronite Block
+tile.blockGemIngotBlock.OnyxBlock.name=Onyx Block
+tile.blockGemIngotBlock.TitaniumBlock.name=Titanium Block
+tile.blockGemIngotBlock.TopazBlock.name=Topaz Block
+tile.blockGemIngotBlock.AmethystBlock.name=Amethyst Block
+tile.blockGemIngotBlock.SapphireBlock.name=Sapphire Block
+tile.blockGemIngotBlock.RubyBlock.name=Ruby Block
 
 #Slippery Blocks
 tile.blockSlipperyStoneBricks.name=Slippery Stone Bricks
@@ -28,6 +41,7 @@ tile.blockSlipperyDarkOakPlanks.name=Slippery DarkOak Planks
 #Items
 #Ingot
 item.itemCopperIngot.name=Copper Ingot
+item.itemTinIngot.name=Tin Ingot
 item.itemMithrilIngot.name=Mithril Ingot
 item.itemSaroniteNugget.name=Saronite Nugget
 item.itemSaroniteIngot.name=Saronite Ingot

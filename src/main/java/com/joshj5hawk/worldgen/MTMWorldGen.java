@@ -39,20 +39,19 @@ public class MTMWorldGen implements IWorldGenerator
 	private void generateSurface(World world, Random random, int x, int z) 
 	{
 		//this.addOreSpawn(BLOCK, world, random, x, z, maxX, MaxZ, maxVeinSize, percentChanceToSpawn, minY, maxY);
-		//this.addOreSpawn(blocks.blockGemOres, 0, world, random, x, z, 16, 16, 4 + random.nextInt(50), 25, 50, 128);
+		this.addOreSpawn(blocks.blockGemOres, 0, world, random, x, z, 16, 16, 4 + random.nextInt(50), 25, 50, 128);
 		
 		BiomeGenBase biome = world.getWorldChunkManager().getBiomeGenAt(x, z);
 		
 		if ((biome == BiomeGenBase.plains || biome == BiomeGenBase.desert))
 		{
-			for(int a = 0; a < 10; a++)
+			for(int a = 0; a < 1; a++)
 			{
-				int i = x + random.nextInt(256);
-				int j = z + random.nextInt(256);
-				int k = world.getHeightValue(i, j);
+				int i = x + random.nextInt(10);
+				int k = random.nextInt(200);
+				int j = z + random.nextInt(10);
 				
 				new StructureSmallHouse().generate(world, random, i, j, k);
-				//System.out.println(k);
 			}
 		}
 		
