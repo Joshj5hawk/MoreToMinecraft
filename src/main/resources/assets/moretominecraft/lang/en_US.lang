@@ -29,6 +29,11 @@ tile.blockGemIngotBlock.AmethystBlock.name=Amethyst Block
 tile.blockGemIngotBlock.SapphireBlock.name=Sapphire Block
 tile.blockGemIngotBlock.RubyBlock.name=Ruby Block
 
+#Decorative Bricks
+tile.blockSnowBricks.name=Snow Bricks
+tile.blockSnowBrickStairs.name=Snow Brick Stairs
+tile.blockSnowBrickSlab.name=Snow Brick Slab
+
 #Slippery Blocks
 tile.blockSlipperyStoneBricks.name=Slippery Stone Bricks
 tile.blockSlipperyOakPlanks.name=Slippery Oak Planks

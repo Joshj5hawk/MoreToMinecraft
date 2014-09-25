@@ -1,7 +1,6 @@
 package com.joshj5hawk.block;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockGlass;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
 
@@ -21,6 +20,9 @@ public class MTMBlock
 	public static Block blockIngotOres;
 	public static Block blockGemOres;
 	public static Block blockGemIngotBlock;
+	public static Block blockSnowBricks;
+	public static Block blockSnowBrickStairs;
+	public static Block blockSnowBrickSlab;
 	
 	
 	public static void initBlocks()
@@ -37,7 +39,9 @@ public class MTMBlock
 		blockIngotOres = new BlockIngotOres(Material.rock).setBlockName("blockIngotOres");
 		blockGemOres = new BlockGemOres(Material.rock).setBlockName("blockGemOres");
 		blockGemIngotBlock = new BlockGemIngotBlock(Material.iron).setBlockName("blockGemIngotBlock");
-		
+		blockSnowBricks = new BlockSnowBricks(Material.craftedSnow).setBlockName("blockSnowBricks").setBlockTextureName(Strings.modid + ":blockSnowBricks");
+		blockSnowBrickStairs = new BlockCustomStairs(Blocks.snow, Material.craftedSnow).setBlockName("blockSnowBrickStairs").setBlockTextureName(Strings.modid + ":blockSnowBricks");
+		blockSnowBrickSlab = new BlockCustomSlabs(false, Material.craftedSnow).setBlockName("blockSnowBrickSlab").setBlockTextureName(Strings.modid + ":blockSnowBricks");
 		
 		registerBlocks();
 	}
@@ -49,7 +53,9 @@ public class MTMBlock
 		GameRegistry.registerBlock(blockIngotOres, ItemBlockIngotOres.class, "blockIngotOres");
 		GameRegistry.registerBlock(blockGemOres, ItemBlockGemOres.class, "blockGemOres");
 		GameRegistry.registerBlock(blockGemIngotBlock, ItemBlockGemIngotBlock.class, "blockGemIngotBlock");
-		
+		GameRegistry.registerBlock(blockSnowBricks,"blockSnowBricks");
+		GameRegistry.registerBlock(blockSnowBrickStairs, "blockSnowBrickStairs");
+		GameRegistry.registerBlock(blockSnowBrickSlab, "blockSnowBrickSlab");
 	}
 	
 }

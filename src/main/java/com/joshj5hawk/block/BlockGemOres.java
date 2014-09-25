@@ -88,4 +88,9 @@ public class BlockGemOres extends Block
 	{
 		return 3 + rand.nextInt(3);
 	}
+	
+	public int damageDropped(int meta)
+	{
+		return meta;
+	}
 }
