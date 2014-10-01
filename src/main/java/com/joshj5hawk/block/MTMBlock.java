@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
 
+import com.joshj5hawk.itemblock.CustomItemBlockSlab;
 import com.joshj5hawk.itemblock.ItemBlockGemIngotBlock;
 import com.joshj5hawk.itemblock.ItemBlockGemOres;
 import com.joshj5hawk.itemblock.ItemBlockIngotOres;
@@ -22,7 +23,8 @@ public class MTMBlock
 	public static Block blockGemIngotBlock;
 	public static Block blockSnowBricks;
 	public static Block blockSnowBrickStairs;
-	public static Block blockSnowBrickSlab;
+	public static Block blockSnowBrickSlabSingle;
+	public static Block blockSnowBrickSlabDouble;
 	
 	
 	public static void initBlocks()
@@ -41,7 +43,8 @@ public class MTMBlock
 		blockGemIngotBlock = new BlockGemIngotBlock(Material.iron).setBlockName("blockGemIngotBlock");
 		blockSnowBricks = new BlockSnowBricks(Material.craftedSnow).setBlockName("blockSnowBricks").setBlockTextureName(Strings.modid + ":blockSnowBricks");
 		blockSnowBrickStairs = new BlockCustomStairs(Blocks.snow, Material.craftedSnow).setBlockName("blockSnowBrickStairs").setBlockTextureName(Strings.modid + ":blockSnowBricks");
-		blockSnowBrickSlab = new BlockCustomSlabs(false, Material.craftedSnow).setBlockName("blockSnowBrickSlab").setBlockTextureName(Strings.modid + ":blockSnowBricks");
+		blockSnowBrickSlabSingle = new BlockCustomSlab(false, blockSnowBricks.getMaterial(), 1, blockSnowBrickSlabSingle, blockSnowBricks, 0).setBlockName("blockSnowBrickSingle");
+		blockSnowBrickSlabDouble = new BlockCustomSlab(false, blockSnowBricks.getMaterial(), 1, blockSnowBrickSlabDouble, blockSnowBricks, 0).setBlockName("blockSnowBrickDouble");
 		
 		registerBlocks();
 	}
@@ -55,7 +58,8 @@ public class MTMBlock
 		GameRegistry.registerBlock(blockGemIngotBlock, ItemBlockGemIngotBlock.class, "blockGemIngotBlock");
 		GameRegistry.registerBlock(blockSnowBricks,"blockSnowBricks");
 		GameRegistry.registerBlock(blockSnowBrickStairs, "blockSnowBrickStairs");
-		GameRegistry.registerBlock(blockSnowBrickSlab, "blockSnowBrickSlab");
+		GameRegistry.registerBlock(blockSnowBrickSlabSingle, CustomItemBlockSlab.class, blockSnowBrickSlabSingle.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(blockSnowBrickSlabDouble, CustomItemBlockSlab.class, blockSnowBrickSlabDouble.getUnlocalizedName().substring(5));
 	}
 	
 }
