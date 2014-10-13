@@ -3,6 +3,7 @@ package com.joshj5hawk.itemblock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
@@ -23,8 +24,9 @@ public class ItemBlockWoolSlab extends ItemBlock {
 	public ItemBlockWoolSlab(Block block) 
 	{
 		super(block);
-		this.singleSlab = (BlockSlab) MTMBlock.blockWoolSlabSingle;
-		this.doubleSlab = (BlockSlab) MTMBlock.blockWoolSlabDouble;
+		//CHANGE THIS BEFORE TRYING SLABS AGAIN!!!
+		this.singleSlab = (BlockSlab) Blocks.bedrock;
+		this.doubleSlab = (BlockSlab) Blocks.bedrock;
 
 		this.field_150948_b = false;
 		this.setMaxDamage(0);
